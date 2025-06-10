@@ -48,12 +48,22 @@
                 transform: translateY(0);
             }
         }
-    </style>
-</head>
-<body class="page-gradient">
+        </style>
+    </head>
+    <body class="page-gradient">
 
     <!-- Seção Principal (Herói) -->
-    <header class="text-center py-16 md:py-24 px-4">
+    <header class="relative text-center py-16 md:py-24 px-4">
+        
+        <!-- Logos -->
+        <div class="hidden md:block"> <!-- Esconde os logos em telas pequenas para não poluir o visual -->
+            <!-- Logo Esquerdo: Asas da Paz Kotekitai (substitua o src) -->
+            <img src="fotos/logo.kotekitai.png" alt="Logo Asas da Paz Kotekitai" class="absolute top-6 left-6 w-24 h-auto opacity-50">
+            
+            <!-- Logo Direito: Taiyo Ongakutai (substitua o src) -->
+            <img src="fotos/logo.ongakutai.png" alt="Logo Taiyo Ongakutai" class="absolute top-6 right-6 w-24 h-auto opacity-50">
+        </div>
+
         <div class="max-w-4xl mx-auto">
             <div class="mb-8 fade-in" style="animation-delay: 0.2s;">
                 <svg class="w-24 h-24 mx-auto text-purple-900/80" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
