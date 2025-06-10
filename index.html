@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concerto: Um Tempo Para a Paz</title>
+    
+    <!-- Tailwind CSS para estilização -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: 'Italiana' e 'Poppins' -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Estilos personalizados */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fdfcfb;
+            color: #3f3f46; /* Cor de texto base (stone-700) */
+        }
+
+        .font-title-stylized {
+            font-family: 'Italiana', serif;
+        }
+
+        /* Gradiente suave que serve como fundo para a página inteira */
+        .page-gradient {
+             background-image: 
+                url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d1c4c9' fill-opacity='0.07'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"),
+                linear-gradient(to bottom, #fdfcfb 0%, #fdecf2 50%, #fdfcfb 100%);
+        }
+        
+        /* Animação de fade-in */
+        .fade-in {
+            animation: fadeIn 1.5s ease-out forwards;
+            opacity: 0;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="page-gradient">
+
+    <!-- Seção Principal (Herói) -->
+    <header class="text-center py-16 md:py-24 px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="mb-8 fade-in" style="animation-delay: 0.2s;">
+                <svg class="w-24 h-24 mx-auto text-purple-900/80" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M32 58C20 58 12 48 12 36C12 36 18 40 32 40C46 40 52 36 52 36C52 48 44 58 32 58Z" fill="currentColor" opacity="0.5"/>
+                    <path d="M32 58C32 58 36 50 42 42C48 34 52 36 52 36" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+                    <path d="M32 58C32 58 28 50 22 42C16 34 12 36 12 36" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+                    <path d="M32 40C24 40 20 32 20 24C20 24 25 28 32 28C39 28 44 24 44 24C44 32 40 40 32 40Z" fill="currentColor" opacity="0.8"/>
+                    <path d="M32 28C28 28 26 22 26 18C26 18 29 22 32 22C35 22 38 18 38 18C38 22 36 28 32 28Z" fill="currentColor"/>
+                    <path d="M32 22C32 22 30 16 32 10C34 16 32 22 32 22Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            
+            <h1 class="font-title-stylized text-5xl md:text-7xl text-neutral-800 tracking-wider fade-in" style="animation-delay: 0.4s;">
+                Um Tempo para a Paz
+            </h1>
+
+            <p class="mt-4 text-lg md:text-xl font-light text-neutral-600 tracking-wider max-w-2xl mx-auto fade-in" style="animation-delay: 0.6s;">
+                Um concerto sobre a esperança que floresce, apresentado por Asas da Paz Kotekitai & Taiyo Ongakutai.
+            </p>
+        </div>
+    </header>
+
+    <main>
+        <!-- Seção do Temporizador -->
+        <section id="countdown-section" class="py-12 md:py-16 bg-white/50 shadow-inner">
+            <div class="max-w-4xl mx-auto text-center px-4">
+                <h2 class="text-2xl font-light tracking-widest text-neutral-700 uppercase mb-8 fade-in">Contagem Regressiva</h2>
+                <div id="countdown" class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 max-w-2xl mx-auto fade-in" style="animation-delay: 0.2s;">
+                    <div class="bg-white/70 p-4 rounded-lg shadow-md">
+                        <span id="days" class="font-title-stylized text-5xl text-purple-900/80">00</span>
+                        <p class="text-sm text-neutral-600 tracking-wider mt-1">Dias</p>
+                    </div>
+                    <div class="bg-white/70 p-4 rounded-lg shadow-md">
+                        <span id="hours" class="font-title-stylized text-5xl text-purple-900/80">00</span>
+                        <p class="text-sm text-neutral-600 tracking-wider mt-1">Horas</p>
+                    </div>
+                    <div class="bg-white/70 p-4 rounded-lg shadow-md">
+                        <span id="minutes" class="font-title-stylized text-5xl text-purple-900/80">00</span>
+                        <p class="text-sm text-neutral-600 tracking-wider mt-1">Minutos</p>
+                    </div>
+                    <div class="bg-white/70 p-4 rounded-lg shadow-md">
+                        <span id="seconds" class="font-title-stylized text-5xl text-purple-900/80">00</span>
+                        <p class="text-sm text-neutral-600 tracking-wider mt-1">Segundos</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Notícias e Jornada -->
+        <section id="journey" class="py-16 md:py-24">
+            <div class="max-w-5xl mx-auto px-4">
+                <h2 class="text-center text-3xl font-light tracking-widest text-neutral-700 uppercase mb-12 fade-in">Nossa Jornada até o Concerto</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Card de Notícia 1: Copie este bloco para adicionar mais notícias -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in" style="animation-delay: 0.2s;">
+                        <img src="https://placehold.co/600x400/fdecf2/3f3f46?text=Foto+do+Ensaio" alt="Foto de um ensaio da orquestra" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="font-semibold text-lg text-neutral-800 mb-2">O Som da Esperança</h3>
+                            <p class="text-neutral-600 font-light text-sm">Nossos jovens músicos dedicam horas após o trabalho e os estudos, transformando desafios em canções de coragem. Cada nota é um passo em direção à paz.</p>
+                        </div>
+                    </div>
+                    <!-- Fim do Card de Notícia 1 -->
+
+                    <!-- Card de Notícia 2 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in" style="animation-delay: 0.4s;">
+                        <img src="https://placehold.co/600x400/fdecf2/3f3f46?text=Detalhe+Instrumento" alt="Detalhe de um instrumento musical" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="font-semibold text-lg text-neutral-800 mb-2">Preparando o Palco</h3>
+                            <p class="text-neutral-600 font-light text-sm">A direção artística de 'Um Tempo para a Paz' é uma jornada da imaginação à serenidade. Compartilharemos em breve mais sobre a história por trás de cada peça do repertório.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card de Notícia 3 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in" style="animation-delay: 0.6s;">
+                        <img src="https://placehold.co/600x400/fdecf2/3f3f46?text=Público+Convidado" alt="Imagem simbólica do público" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="font-semibold text-lg text-neutral-800 mb-2">Um Convite à Escuta</h3>
+                            <p class="text-neutral-600 font-light text-sm">Este concerto é um convite para fecharmos os olhos e visualizarmos um mundo diferente. A paz, como a música, exige harmonia e, acima de tudo, escuta.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="text-center py-8 border-t border-purple-900/10">
+        <p class="text-sm text-neutral-500">Asas da Paz Kotekitai & Taiyo Ongakutai © 2025</p>
+    </footer>
+
+    <script>
+        // --- SCRIPT DO TEMPORIZADOR ---
+
+        // 1. Defina a data e hora do evento. 
+        // Formato: "Month Day, Year HH:MM:SS" (em inglês para maior compatibilidade)
+        const countdownDate = new Date("September 20, 2025 19:00:00").getTime();
+
+        // 2. Atualize o temporizador a cada 1 segundo
+        const x = setInterval(function() {
+
+            // 3. Pega a data e hora de agora
+            const now = new Date().getTime();
+
+            // 4. Calcula a distância entre agora e a data do evento
+            const distance = countdownDate - now;
+
+            // 5. Cálculos para dias, horas, minutos e segundos
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // 6. Mostra o resultado nos elementos com os IDs correspondentes
+            // Adiciona um '0' na frente se o número for menor que 10
+            document.getElementById("days").innerText = String(days).padStart(2, '0');
+            document.getElementById("hours").innerText = String(hours).padStart(2, '0');
+            document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
+
+            // 7. Se o temporizador chegar ao fim, mostre uma mensagem
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown-section").innerHTML = '<h2 class="text-2xl font-light tracking-widest text-neutral-700 uppercase">O concerto começou!</h2>';
+            }
+        }, 1000);
+    </script>
+
+</body>
+</html>
