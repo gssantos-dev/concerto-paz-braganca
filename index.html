@@ -102,40 +102,44 @@
             </div>
         </section>
 
-        <!-- Seção de Notícias e Jornada -->
+        <!-- Seção de Notícias em Formato de Blog -->
         <section id="journey" class="py-16 md:py-24">
-            <div class="max-w-5xl mx-auto px-4">
+            <div class="max-w-5xl mx-auto px-4 space-y-16 md:space-y-24">
                 <h2 class="text-center text-3xl font-light tracking-widest text-neutral-700 uppercase mb-12 fade-in">Nossa Jornada até o Concerto</h2>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Card de Notícia 1: Copie este bloco para adicionar mais notícias -->
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in" style="animation-delay: 0.2s;">
-                        <img src="fotos/image1.jpg" alt="Início da jornada" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="font-semibold text-lg text-neutral-800 mb-2">O Som da Esperança</h3>
-                            <p class="text-neutral-600 font-light text-sm">Nossos jovens músicos dedicam-se incansavelmente para entoar o maravilhoso som da esperança. Através de uma genuina felicidade e com o coração transbordando de humanismo, atuam no palco da vida de maneira épica em prol da transformação do sofrimento em esperança.</p>
-                        </div>
+                <!-- Post de Blog 1: Imagem à Esquerda -->
+                <article class="flex flex-col md:flex-row items-center gap-8 md:gap-12 fade-in">
+                    <div class="md:w-1/2">
+                        <img src="fotos/ensaio-1.jpg" alt="Foto do ensaio da orquestra" class="w-full h-auto rounded-lg shadow-xl">
                     </div>
-                    <!-- Fim do Card de Notícia 1 -->
+                    <div class="md:w-1/2 text-center md:text-left">
+                        <h3 class="font-semibold text-2xl text-neutral-800 mb-3">O Som da Esperança</h3>
+                        <p class="text-neutral-600 font-light leading-relaxed">Nossos jovens músicos dedicam-se incansavelmente para entoar o maravilhoso som da esperança. Através de uma genuina felicidade e com o coração transbordando de humanismo, atuam no palco da vida de maneira épica em prol da transformação do sofrimento em esperança.</p>
+                    </div>
+                </article>
 
-                    <!-- Card de Notícia 2 -->
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in" style="animation-delay: 0.4s;">
-                        <img src="https://placehold.co/600x400/fdecf2/3f3f46?text=Detalhe+Instrumento" alt="Detalhe de um instrumento musical" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="font-semibold text-lg text-neutral-800 mb-2">Preparando o Palco</h3>
-                            <p class="text-neutral-600 font-light text-sm">A direção artística de 'Um Tempo para a Paz' é uma jornada da imaginação à serenidade. Compartilharemos em breve mais sobre a história por trás de cada peça do repertório.</p>
-                        </div>
+                <!-- Post de Blog 2: Imagem à Direita -->
+                <article class="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-12 fade-in">
+                    <div class="md:w-1/2">
+                         <img src="https://placehold.co/800x600/fdecf2/3f3f46?text=Detalhe+Instrumento" alt="Detalhe de um instrumento musical" class="w-full h-auto rounded-lg shadow-xl">
                     </div>
+                    <div class="md:w-1/2 text-center md:text-left">
+                        <h3 class="font-semibold text-2xl text-neutral-800 mb-3">A História por Trás da Música</h3>
+                        <p class="text-neutral-600 font-light leading-relaxed">A direção artística de 'Um Tempo para a Paz' é uma jornada da imaginação à serenidade. Em breve, compartilharemos mais sobre o significado profundo por trás de cada peça do repertório.</p>
+                    </div>
+                </article>
 
-                    <!-- Card de Notícia 3 -->
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in" style="animation-delay: 0.6s;">
-                        <img src="https://placehold.co/600x400/fdecf2/3f3f46?text=Público+Convidado" alt="Imagem simbólica do público" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="font-semibold text-lg text-neutral-800 mb-2">Um Convite à Escuta</h3>
-                            <p class="text-neutral-600 font-light text-sm">Este concerto é um convite para fecharmos os olhos e visualizarmos um mundo diferente. A paz, como a música, exige harmonia e, acima de tudo, escuta.</p>
-                        </div>
+                <!-- Post de Blog 3: Imagem à Esquerda -->
+                <article class="flex flex-col md:flex-row items-center gap-8 md:gap-12 fade-in">
+                    <div class="md:w-1/2">
+                        <img src="https://placehold.co/800x600/fdecf2/3f3f46?text=Público+Convidado" alt="Imagem simbólica do público" class="w-full h-auto rounded-lg shadow-xl">
                     </div>
-                </div>
+                    <div class="md:w-1/2 text-center md:text-left">
+                        <h3 class="font-semibold text-2xl text-neutral-800 mb-3">Um Convite à Escuta</h3>
+                        <p class="text-neutral-600 font-light leading-relaxed">Este concerto é um convite para fecharmos os olhos e visualizarmos um mundo diferente. Acreditamos que a paz, assim como a música, exige harmonia e, acima de tudo, uma escuta atenta e empática.</p>
+                    </div>
+                </article>
+
             </div>
         </section>
     </main>
@@ -146,34 +150,20 @@
 
     <script>
         // --- SCRIPT DO TEMPORIZADOR ---
-
-        // 1. Defina a data e hora do evento. 
-        // Formato: "Month Day, Year HH:MM:SS" (em inglês para maior compatibilidade)
         const countdownDate = new Date("September 20, 2025 19:00:00").getTime();
-
-        // 2. Atualize o temporizador a cada 1 segundo
         const x = setInterval(function() {
-
-            // 3. Pega a data e hora de agora
             const now = new Date().getTime();
-
-            // 4. Calcula a distância entre agora e a data do evento
             const distance = countdownDate - now;
-
-            // 5. Cálculos para dias, horas, minutos e segundos
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            // 6. Mostra o resultado nos elementos com os IDs correspondentes
-            // Adiciona um '0' na frente se o número for menor que 10
             document.getElementById("days").innerText = String(days).padStart(2, '0');
             document.getElementById("hours").innerText = String(hours).padStart(2, '0');
             document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
             document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
 
-            // 7. Se o temporizador chegar ao fim, mostre uma mensagem
             if (distance < 0) {
                 clearInterval(x);
                 document.getElementById("countdown-section").innerHTML = '<h2 class="text-2xl font-light tracking-widest text-neutral-700 uppercase">O concerto começou!</h2>';
