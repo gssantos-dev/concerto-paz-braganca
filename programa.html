@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa do Concerto - Um Tempo Para a Paz</title>
+    
+    <!-- Tailwind CSS para estilização -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: 'Italiana' e 'Poppins' -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Estilos personalizados */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fdfcfb;
+            color: #3f3f46; /* Cor de texto base (stone-700) */
+        }
+        .font-title-stylized { font-family: 'Italiana', serif; }
+        .page-gradient {
+             background-image: 
+                url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d1c4c9' fill-opacity='0.07'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"),
+                linear-gradient(to bottom, #fdfcfb 0%, #fdecf2 50%, #fdfcfb 100%);
+        }
+    </style>
+</head>
+<body class="page-gradient">
+
+    <!-- Menu de Navegação (Consistente em todas as páginas) -->
+    <nav class="bg-white/30 backdrop-blur-sm sticky top-0 z-50 shadow-sm border-y border-purple-900/10">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="flex items-center justify-center h-16">
+                <div class="flex space-x-8 md:space-x-12 text-sm font-medium uppercase tracking-wider text-neutral-600">
+                    <a href="index.html" class="hover:text-purple-900 transition-colors">Início</a>
+                    <a href="programa.html" class="hover:text-purple-900 transition-colors">Programa do Concerto</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="py-16 md:py-24">
+        <div class="max-w-4xl mx-auto px-4">
+            <header class="text-center mb-16">
+                <h1 class="font-title-stylized text-5xl md:text-6xl text-neutral-800">Programa do Concerto</h1>
+                <p class="mt-4 text-lg text-neutral-600 font-light">Uma jornada musical da esperança à serenidade conquistada.</p>
+            </header>
+
+            <div class="space-y-12">
+                
+                <!-- Música 1 -->
+                <article class="p-8 bg-white/50 rounded-lg shadow-md border border-black/5">
+                    <h2 class="text-2xl font-semibold text-neutral-800">The Light Eternal</h2>
+                    <p class="text-sm text-neutral-500 mb-4">James Swearingen</p>
+                    <p class="font-light italic text-purple-800 mb-4">Palavra-chave: Esperança Luminosa.</p>
+                    <p class="text-neutral-600 font-light leading-relaxed">O concerto se inicia com uma representação da esperança que sobrevive nas adversidades, a luz da dignidade humana que nunca se apaga. É um convite para olharmos para dentro e encontrarmos a força serena que nos guiará. Esta peça é o nosso farol inicial, a promessa de que, mesmo na quietude, algo grandioso está prestes a nascer.</p>
+                </article>
+
+                <!-- Música 2 -->
+                <article class="p-8 bg-white/50 rounded-lg shadow-md border border-black/5">
+                    <h2 class="text-2xl font-semibold text-neutral-800">Pure Imagination</h2>
+                    <p class="text-sm text-neutral-500 mb-4">Leslie Bricusse & Anthony Newley</p>
+                    <p class="font-light italic text-purple-800 mb-4">Palavra-chave: Visão Inspiradora.</p>
+                    <p class="text-neutral-600 font-light leading-relaxed">Da celebração, mergulhamos no reino do sonho e da imaginação criadora. É aqui que a visão de um mundo pacífico e ideal começa a tomar forma, a semente da paz plantada na mente e no coração.</p>
+                </article>
+
+                <!-- Música 3 -->
+                <article class="p-8 bg-white/50 rounded-lg shadow-md border border-black/5">
+                    <h2 class="text-2xl font-semibold text-neutral-800">Remembrances</h2>
+                    <p class="text-sm text-neutral-500 mb-4">John Williams</p>
+                    <p class="font-light italic text-purple-800 mb-4">Palavra-chave: Memória Dolorosa.</p>
+                    <p class="text-neutral-600 font-light leading-relaxed">O sonho se depara com a dura realidade da perda, da memória do conflito e da profunda tristeza causada pela ausência de paz. É um momento de introspecção profunda, de conexão com as feridas da humanidade.</p>
+                </article>
+                
+                <!-- E assim por diante para as outras músicas... -->
+                <article class="p-8 bg-white/50 rounded-lg shadow-md border border-black/5">
+                    <h2 class="text-2xl font-semibold text-neutral-800">Sekai Kofu no Uta</h2>
+                    <p class="text-sm text-neutral-500 mb-4">Yoko Kanno / SGI</p>
+                    <p class="font-light italic text-purple-800 mb-4">Palavra-chave: Compromisso Renovado.</p>
+                    <p class="text-neutral-600 font-light leading-relaxed">Após o confronto com a dor, esta canção surge como uma ponte suave e espiritual. Ela representa o juramento do compromisso e da dedicação individual e coletiva pela construção da paz mundial. É um momento de fortalecimento interior e da decisão de seguir adiante.</p>
+                </article>
+
+                <article class="p-8 bg-white/50 rounded-lg shadow-md border border-black/5">
+                    <h2 class="text-2xl font-semibold text-neutral-800">Hana wa Saku</h2>
+                    <p class="text-sm text-neutral-500 mb-4">Shunji Iwai & Yoko Kanno</p>
+                    <p class="font-light italic text-purple-800 mb-4">Palavra-chave: Esperança Resiliente.</p>
+                    <p class="text-neutral-600 font-light leading-relaxed">Do compromisso renovado, brota a cura, a resiliência e a beleza que persiste mesmo após a devastação. As flores que desabrocham são o símbolo da vida que continua, da esperança que se reconstrói e da paz que começa a se manifestar como superação.</p>
+                </article>
+                
+                 <article class="p-8 bg-white/50 rounded-lg shadow-md border border-black/5">
+                    <h2 class="text-2xl font-semibold text-neutral-800">Libertango</h2>
+                    <p class="text-sm text-neutral-500 mb-4">Astor Piazzolla</p>
+                    <p class="font-light italic text-purple-800 mb-4">Palavra-chave: Paixão Libertadora.</p>
+                    <p class="text-neutral-600 font-light leading-relaxed">Com a esperança e a cura, emerge uma energia vital, apaixonada e indomável: o anseio pela liberdade plena. "Libertango" aqui não é apenas uma dança, mas a expressão da força necessária para romper com o que oprime, a afirmação da dignidade e da paixão pela vida.</p>
+                </article>
+
+                <article class="p-8 bg-white/50 rounded-lg shadow-md border border-black/5">
+                    <h2 class="text-2xl font-semibold text-neutral-800">A Time for Peace</h2>
+                    <p class="text-sm text-neutral-500 mb-4">Peter Graham</p>
+                    <p class="font-light italic text-purple-800 mb-4">Palavra-chave: Paz Profunda.</p>
+                    <p class="text-neutral-600 font-light leading-relaxed">Após a jornada por sonhos, dores, promessas, curas e a afirmação da liberdade, o concerto se conclui com a profunda contemplação e internalização da paz. Não uma paz frágil, mas uma paz fortalecida pelas experiências vividas.</p>
+                </article>
+                
+            </div>
+        </div>
+    </main>
+    
+    <footer class="text-center py-8 border-t border-purple-900/10"><p class="text-sm text-neutral-500">Asas da Paz Kotekitai & Taiyo Ongakutai © 2025</p></footer>
+
+</body>
+</html>
