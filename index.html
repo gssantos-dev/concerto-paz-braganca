@@ -86,14 +86,13 @@
         </div>
     </header>
 
-        <!-- Menu de Navegação -->
-    <nav class="bg-white/30 backdrop-blur-sm sticky top-0 z-50 shadow-sm border-y border-purple-900/10">
+    <!-- Menu de Navegação -->
+    <nav id="main-nav" class="bg-white/30 backdrop-blur-sm sticky top-0 z-50 shadow-sm border-y border-purple-900/10">
         <div class="max-w-5xl mx-auto px-4">
             <div class="flex items-center justify-center h-16">
                 <div class="flex space-x-8 md:space-x-12 text-sm font-medium uppercase tracking-wider text-neutral-600">
                     <a href="index.html" class="hover:text-purple-900 transition-colors">Início</a>
                     <a href="programa.html" class="hover:text-purple-900 transition-colors">Programa do Concerto</a>
-                    <!-- Futuramente, poderíamos adicionar mais links aqui -->
                 </div>
             </div>
         </div>
@@ -167,29 +166,43 @@
         </section>
     </main>
     
-    <footer class="text-center py-8 border-t border-purple-900/10">
-        <p class="text-sm text-neutral-500">Asas da Paz Kotekitai & Taiyo Ongakutai © 2025</p>
-    </footer>
-
+    <footer class="text-center py-8 border-t border-purple-900/10"><p class="text-sm text-neutral-500">Asas da Paz Kotekitai & Taiyo Ongakutai © 2025</p></footer>
     <script>
-        // --- SCRIPT DO TEMPORIZADOR ---
+        // --- SCRIPT DO TEMPORIZADOR E LÓGICA DE EXIBIÇÃO ---
         const countdownDate = new Date("September 20, 2025 19:00:00").getTime();
+        
         const x = setInterval(function() {
             const now = new Date().getTime();
             const distance = countdownDate - now;
+            
+            // Cálculos para o temporizador
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
+            // Atualiza o temporizador na tela
             document.getElementById("days").innerText = String(days).padStart(2, '0');
             document.getElementById("hours").innerText = String(hours).padStart(2, '0');
             document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
             document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
 
+            // --- LÓGICA PARA EXIBIR O MENU ---
+            // Calcula o valor de duas semanas em milissegundos
+            const twoWeeksInMs = 14 * 24 * 60 * 60 * 1000;
+            const navMenu = document.getElementById('main-nav');
+
+            // Se a distância para o evento for menor ou igual a duas semanas, mostra o menu
+            if (distance <= twoWeeksInMs) {
+                navMenu.classList.remove('hidden');
+            }
+
+            // Se o temporizador chegar ao fim, mostra uma mensagem
             if (distance < 0) {
                 clearInterval(x);
                 document.getElementById("countdown-section").innerHTML = '<h2 class="text-2xl font-light tracking-widest text-neutral-700 uppercase">O concerto começou!</h2>';
+                // Garante que o menu esteja visível quando o concerto começar
+                navMenu.classList.remove('hidden');
             }
         }, 1000);
     </script>
