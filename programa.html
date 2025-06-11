@@ -30,7 +30,7 @@
 </head>
 <body class="page-gradient">
 
-    <!-- Menu de Navegação (Consistente em todas as páginas) -->
+    <!-- Menu de Navegação -->
     <nav class="bg-white/30 backdrop-blur-sm sticky top-0 z-50 shadow-sm border-y border-purple-900/10">
         <div class="max-w-5xl mx-auto px-4">
             <div class="flex items-center justify-center h-16">
@@ -49,71 +49,171 @@
                 <p class="mt-4 text-lg text-neutral-600 font-light">Uma jornada musical da esperança à serenidade conquistada.</p>
             </header>
 
-            <div class="space-y-12">
-                
-                <!-- Música 1 -->
-                <article class="p-8 bg-white/50 rounded-lg shadow-md border border-black/5">
-                    <h2 class="text-2xl font-semibold text-neutral-800">The Light Eternal</h2>
-                    <p class="text-sm text-neutral-500 mb-4">James Swearingen | Adaptação de Gustavo Santana</p>
-                    <p class="text-neutral-600 font-light leading-relaxed">O concerto se inicia com uma representação da esperança que sobrevive nas adversidades, a luz da dignidade humana que nunca se apaga. É um convite para olharmos para dentro e encontrarmos a força serena que nos guiará. Esta peça é o nosso farol inicial, a promessa de que, mesmo na quietude, algo grandioso está prestes a nascer.</p>
-                </article>
+            <!-- Contêiner das Abas -->
+            <div>
+                <!-- Botões das Abas -->
+                <div class="border-b border-gray-200 mb-8">
+                    <nav class="-mb-px flex justify-center space-x-4 md:space-x-8" aria-label="Tabs">
+                        <button class="tab-button tab-active whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm" data-target="apresentacao">Apresentação</button>
+                        <button class="tab-button whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm text-gray-500 border-transparent hover:border-gray-300" data-target="ficha-tecnica">Ficha Técnica</button>
+                        <button class="tab-button whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm text-gray-500 border-transparent hover:border-gray-300" data-target="repertorio">Repertório</button>
+                    </nav>
+                </div>
 
-                <!-- Música 2 -->
-                <article class="p-8 bg-white/50 rounded-lg shadow-md border border-black/5">
-                    <h2 class="text-2xl font-semibold text-neutral-800">Pure Imagination</h2>
-                    <p class="text-sm text-neutral-500 mb-4">Leslie Bricusse & Anthony Newley | Adaptação de Gustavo Santana</p>
-                    <p class="text-neutral-600 font-light leading-relaxed">Da celebração, mergulhamos no reino do sonho e da imaginação criadora. É aqui que a visão de um mundo pacífico e ideal começa a tomar forma, a semente da paz plantada na mente e no coração.</p>
-                </article>
+                <!-- Painéis de Conteúdo das Abas -->
+                <div id="tab-content">
+                    <!-- Painel 1: Apresentação (visível por padrão) -->
+                    <div id="apresentacao" class="tab-panel">
+                        <div class="p-8 bg-white/50 rounded-lg shadow-md border border-black/5 text-center">
+                            <h2 class="text-2xl font-semibold text-neutral-800 mb-4">A Música que Constrói a Paz</h2>
+                            <div class="text-neutral-600 font-light leading-relaxed text-left space-y-4">
+                               <p>Criar um texto de apresentação da banda de maneira institucional...</p>
+                            </div>
+                        </div>
+                    </div>
 
-                <!-- Música 3 -->
-                <article class="p-8 bg-white/50 rounded-lg shadow-md border border-black/5">
-                    <h2 class="text-2xl font-semibold text-neutral-800">Remembrances</h2>
-                    <p class="text-sm text-neutral-500 mb-4">John Williams | Adaptação de Gustavo Santana</p>
-                    <p class="text-neutral-600 font-light leading-relaxed">O sonho se depara com a dura realidade da perda, da memória do conflito e da profunda tristeza causada pela ausência de paz. É um momento de introspecção profunda, de conexão com as feridas da humanidade.</p>
-                </article>
-                
-                <!-- Música 4 -->
-                <article class="p-8 bg-white/50 rounded-lg shadow-md border border-black/5">
-                    <h2 class="text-2xl font-semibold text-neutral-800">Sekai Kofu no Uta</h2>
-                    <p class="text-sm text-neutral-500 mb-4">
-                        Yoko Kanno / SGI</br>
-                        Participação Especial de Aya Monma
-                    </p>
-                    <p class="text-neutral-600 font-light leading-relaxed">Após o confronto com a dor, esta canção surge como uma ponte suave e espiritual. Ela representa o juramento do compromisso e da dedicação individual e coletiva pela construção da paz mundial. É um momento de fortalecimento interior e da decisão de seguir adiante.</p>
-                </article>
+                    <!-- Painel 2: Ficha Técnica (escondido por padrão) -->
+                    <div id="ficha-tecnica" class="tab-panel">
+                        <div class="p-8 bg-white/50 rounded-lg shadow-md border border-black/5">
+                            <h2 class="text-2xl font-semibold text-neutral-800 text-center mb-6">Músicos e Participantes</h2>
+                            <div class="text-neutral-600 font-light space-y-4">
+                                <p><strong class="font-semibold text-neutral-800">Direção Artística e Regência:</strong> Gustavo de Santana Santos</p>
+                                <p><strong class="font-semibold text-neutral-800">Participação Especial (Voz):</strong> Aya Monma</p>
+                                <p><strong class="font-semibold text-neutral-800">Participação Especial (Dança):</strong> Millena Barbosa</p>
+                                <hr class="my-6 border-gray-200">
+                                <p><strong class="font-semibold text-neutral-800">Orquestra Asas da Paz Kotekitai & Taiyo Ongakutai</strong></p>
+                                <ul class="list-disc list-inside text-sm columns-2 md:columns-3">
+                                    <li>Michele Fugiyama (Flauta)</li>
+                                    <li>Miki Yamamoto (Flauta)</li>
+                                    <li>Caroline Ueahara (Flauta)</li>
+                                    <li>Heloisa Vaccarelli (Flauta)</li>
+                                    <li>Luna Martins (Flauta)</li>
+                                    <li>Ana Clara Catarino (Flauta)</li>
+                                    <li>Amanda Potenza (Clarinete)</li>
+                                    <li>Nicolle Suzuki (Clarinete)</li>
+                                    <li>Yago Borges (Saxofone Alto)</li>
+                                    <li>Midori Suzuki (Saxofone Alto)</li>
+                                    <li>Michele Dias (Saxofone Alto)</li>
+                                    <li>Théo Firmino (Saxofone Alto)</li>
+                                    <li>Maria Inês Vaccarelli (Saxofone Tenor)</li>
+                                    <li>Mieko Fugiyama (Trompete)</li>
+                                    <li>Jéss Fernandes (Trompete)</li>
+                                    <li>Henri Saito (Trompete)</li>
+                                    <li>Henzo Saito (Trompete)</li>
+                                    <li>Melissa Velasquez (Trompete)</li>
+                                    <li>Alexia Martins (Trombone)</li>
+                                    <li>Érica Suzuki (Trombone)</li>
+                                    <li>Eiji Watanabe (Eufônio)</li>
+                                    <li>Rafael Uryu (Tuba)</li>
+                                    <li>Caique Borges (Contrabaixo)</li>
+                                    <li>Itiro Suzuki (Percussão)</li>
+                                    <li>Stella Faez (Percussão)</li>
+                                    <li>Sayuri Brandão (Percussão)</li>
+                                    <li>Matheus Sandrin (Percussão)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>            
 
-                <!-- Música 5 -->
-                <article class="p-8 bg-white/50 rounded-lg shadow-md border border-black/5">
-                    <h2 class="text-2xl font-semibold text-neutral-800">Hana wa Saku</h2>
-                    <p class="text-sm text-neutral-500 mb-4">
-                        Shunji Iwai & Yoko Kanno | Arranjo de Gustavo Santana</p>
-                        Participação Especial de Aya Monma
-                    </p>
-                    <p class="text-neutral-600 font-light leading-relaxed">Do compromisso renovado, brota a cura, a resiliência e a beleza que persiste mesmo após a devastação. As flores que desabrocham são o símbolo da vida que continua, da esperança que se reconstrói e da paz que começa a se manifestar como superação.</p>
-                </article>
+
+                <!-- Painel 3: Repertório (escondido por padrão) -->
+                <div id="repertorio" class="tab-panel">
+                    <div class="space-y-8">
                 
-                <!-- Música 6 -->
-                 <article class="p-8 bg-white/50 rounded-lg shadow-md border border-black/5">
-                    <h2 class="text-2xl font-semibold text-neutral-800">Libertango</h2>
-                    <p class="text-sm text-neutral-500 mb-4">
-                        Astor Piazzolla | Adaptação de Gustavo Santana</br>
-                        Participação Especial de Millena Barbosa
-                    </p>
-                    <p class="text-neutral-600 font-light leading-relaxed">Com a esperança e a cura, emerge uma energia vital, apaixonada e indomável: o anseio pela liberdade plena. "Libertango" aqui não é apenas uma dança, mas a expressão da força necessária para romper com o que oprime, a afirmação da dignidade e da paixão pela vida.</p>
-                </article>
-                
-                <!-- Música 7 -->
-                <article class="p-8 bg-white/50 rounded-lg shadow-md border border-black/5">
-                    <h2 class="text-2xl font-semibold text-neutral-800">A Time for Peace</h2>
-                    <p class="text-sm text-neutral-500 mb-4">Peter Graham | Adaptação de Gustavo Santana</p>
-                    <p class="text-neutral-600 font-light leading-relaxed">Após a jornada por sonhos, dores, promessas, curas e a afirmação da liberdade, o concerto se conclui com a profunda contemplação e internalização da paz. Não uma paz frágil, mas uma paz fortalecida pelas experiências vividas.</p>
-                </article>
-                
+                        <!-- Música 1 -->
+                        <article class="p-8 bg-white/50 rounded-lg shadow-md border border-black/5">
+                            <h2 class="text-2xl font-semibold text-neutral-800">The Light Eternal</h2>
+                            <p class="text-sm text-neutral-500 mb-4">James Swearingen | Adaptação de Gustavo Santana</p>
+                            <p class="text-neutral-600 font-light leading-relaxed">O concerto se inicia com uma representação da esperança que sobrevive nas adversidades, a luz da dignidade humana que nunca se apaga. É um convite para olharmos para dentro e encontrarmos a força serena que nos guiará. Esta peça é o nosso farol inicial, a promessa de que, mesmo na quietude, algo grandioso está prestes a nascer.</p>
+                        </article>
+
+                        <!-- Música 2 -->
+                        <article class="p-8 bg-white/50 rounded-lg shadow-md border border-black/5">
+                            <h2 class="text-2xl font-semibold text-neutral-800">Pure Imagination</h2>
+                            <p class="text-sm text-neutral-500 mb-4">Leslie Bricusse & Anthony Newley | Adaptação de Gustavo Santana</p>
+                            <p class="text-neutral-600 font-light leading-relaxed">Da celebração, mergulhamos no reino do sonho e da imaginação criadora. É aqui que a visão de um mundo pacífico e ideal começa a tomar forma, a semente da paz plantada na mente e no coração.</p>
+                        </article>
+
+                        <!-- Música 3 -->
+                        <article class="p-8 bg-white/50 rounded-lg shadow-md border border-black/5">
+                            <h2 class="text-2xl font-semibold text-neutral-800">Remembrances</h2>
+                            <p class="text-sm text-neutral-500 mb-4">John Williams | Adaptação de Gustavo Santana</p>
+                            <p class="text-neutral-600 font-light leading-relaxed">O sonho se depara com a dura realidade da perda, da memória do conflito e da profunda tristeza causada pela ausência de paz. É um momento de introspecção profunda, de conexão com as feridas da humanidade.</p>
+                        </article>
+                        
+                        <!-- Música 4 -->
+                        <article class="p-8 bg-white/50 rounded-lg shadow-md border border-black/5">
+                            <h2 class="text-2xl font-semibold text-neutral-800">Sekai Kofu no Uta</h2>
+                            <p class="text-sm text-neutral-500 mb-4">
+                                Yoko Kanno / SGI</br>
+                                Participação Especial de Aya Monma
+                            </p>
+                            <p class="text-neutral-600 font-light leading-relaxed">Após o confronto com a dor, esta canção surge como uma ponte suave e espiritual. Ela representa o juramento do compromisso e da dedicação individual e coletiva pela construção da paz mundial. É um momento de fortalecimento interior e da decisão de seguir adiante.</p>
+                        </article>
+
+                        <!-- Música 5 -->
+                        <article class="p-8 bg-white/50 rounded-lg shadow-md border border-black/5">
+                            <h2 class="text-2xl font-semibold text-neutral-800">Hana wa Saku</h2>
+                            <p class="text-sm text-neutral-500 mb-4">
+                                Shunji Iwai & Yoko Kanno | Arranjo de Gustavo Santana</p>
+                                Participação Especial de Aya Monma
+                            </p>
+                            <p class="text-neutral-600 font-light leading-relaxed">Do compromisso renovado, brota a cura, a resiliência e a beleza que persiste mesmo após a devastação. As flores que desabrocham são o símbolo da vida que continua, da esperança que se reconstrói e da paz que começa a se manifestar como superação.</p>
+                        </article>
+                        
+                        <!-- Música 6 -->
+                        <article class="p-8 bg-white/50 rounded-lg shadow-md border border-black/5">
+                            <h2 class="text-2xl font-semibold text-neutral-800">Libertango</h2>
+                            <p class="text-sm text-neutral-500 mb-4">
+                                Astor Piazzolla | Adaptação de Gustavo Santana</br>
+                                Participação Especial de Millena Barbosa
+                            </p>
+                            <p class="text-neutral-600 font-light leading-relaxed">Com a esperança e a cura, emerge uma energia vital, apaixonada e indomável: o anseio pela liberdade plena. "Libertango" aqui não é apenas uma dança, mas a expressão da força necessária para romper com o que oprime, a afirmação da dignidade e da paixão pela vida.</p>
+                        </article>
+                        
+                        <!-- Música 7 -->
+                        <article class="p-8 bg-white/50 rounded-lg shadow-md border border-black/5">
+                            <h2 class="text-2xl font-semibold text-neutral-800">A Time for Peace</h2>
+                            <p class="text-sm text-neutral-500 mb-4">Peter Graham | Adaptação de Gustavo Santana</p>
+                            <p class="text-neutral-600 font-light leading-relaxed">Após a jornada por sonhos, dores, promessas, curas e a afirmação da liberdade, o concerto se conclui com a profunda contemplação e internalização da paz. Não uma paz frágil, mas uma paz fortalecida pelas experiências vividas.</p>
+                        </article>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
     
     <footer class="text-center py-8 border-t border-purple-900/10"><p class="text-sm text-neutral-500">Asas da Paz Kotekitai & Taiyo Ongakutai © 2025</p></footer>
+    <script>
+        // --- SCRIPT PARA FUNCIONALIDADE DAS ABAS ---
+        const tabs = document.querySelectorAll('.tab-button');
+        const tabPanels = document.querySelectorAll('.tab-panel');
 
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // 1. Remove o estilo de "ativo" de todos os botões
+                tabs.forEach(item => {
+                    item.classList.remove('tab-active');
+                    item.classList.add('text-gray-500', 'border-transparent', 'hover:border-gray-300');
+                });
+
+                // 2. Adiciona o estilo de "ativo" apenas ao botão clicado
+                tab.classList.add('tab-active');
+                tab.classList.remove('text-gray-500', 'border-transparent', 'hover:border-gray-300');
+
+                // 3. Esconde todos os painéis de conteúdo
+                tabPanels.forEach(panel => {
+                    panel.classList.add('hidden');
+                });
+
+                // 4. Mostra o painel de conteúdo correspondente ao botão clicado
+                const targetPanelId = tab.getAttribute('data-target');
+                const targetPanel = document.getElementById(targetPanelId);
+                if (targetPanel) {
+                    targetPanel.classList.remove('hidden');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
