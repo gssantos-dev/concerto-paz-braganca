@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria - Um Tempo Para a Paz</title>
+    
+    <!-- Tailwind CSS para estilização -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: 'Italiana' e 'Poppins' -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Estilos personalizados */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fdfcfb;
+            color: #3f3f46;
+        }
+        .font-title-stylized { font-family: 'Italiana', serif; }
+        .page-gradient {
+             background-image: 
+                url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d1c4c9' fill-opacity='0.07'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"),
+                linear-gradient(to bottom, #fdfcfb 0%, #fdecf2 50%, #fdfcfb 100%);
+        }
+        .tab-active {
+            border-bottom-color: #581c87;
+            color: #3f3f46;
+        }
+    </style>
+</head>
+<body class="page-gradient">
+
+    <!-- Menu de Navegação -->
+    <nav class="bg-white/30 backdrop-blur-sm sticky top-0 z-50 shadow-sm border-y border-purple-900/10">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="flex items-center justify-center h-16">
+                <div class="flex space-x-8 md:space-x-12 text-sm font-medium uppercase tracking-wider text-neutral-600">
+                    <a href="index.html" class="hover:text-purple-900 transition-colors">Início</a>
+                    <a href="programa.html" class="hover:text-purple-900 transition-colors">Programa</a>
+                    <a href="galeria.html" class="hover:text-purple-900 transition-colors">Galeria</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="py-16 md:py-24">
+        <div class="max-w-5xl mx-auto px-4">
+            <header class="text-center mb-12">
+                <h1 class="font-title-stylized text-5xl md:text-6xl text-neutral-800">Galeria de Memórias</h1>
+                <p class="mt-4 text-lg text-neutral-600 font-light">As imagens e sentimentos que constroem a paz.</p>
+            </header>
+
+            <!-- Contêiner das Abas -->
+            <div>
+                <!-- Botões das Abas -->
+                <div class="border-b border-gray-200 mb-8">
+                    <nav class="-mb-px flex justify-center space-x-4 md:space-x-8" aria-label="Tabs">
+                        <button class="tab-button tab-active whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm" data-target="fotos-videos">Fotos & Vídeos</button>
+                        <button class="tab-button whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm text-gray-500 border-transparent hover:border-gray-300" data-target="painel-paz">Painel: "A Paz que Quero Construir"</button>
+                    </nav>
+                </div>
+
+                <!-- Painéis de Conteúdo das Abas -->
+                <div id="tab-content">
+                    <!-- Painel 1: Fotos & Vídeos (Oficial) -->
+                    <div id="fotos-videos" class="tab-panel">
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                            <img src="https://placehold.co/600x600/fdecf2/3f3f46?text=Foto+1" class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                            <img src="https://placehold.co/600x600/fdecf2/3f3f46?text=Foto+2" class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                            <div class="col-span-2 md:col-span-1 aspect-video">
+                                <iframe class="w-full h-full rounded-lg shadow-md" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <img src="https://placehold.co/600x600/fdecf2/3f3f46?text=Foto+3" class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                            <img src="https://placehold.co/600x600/fdecf2/3f3f46?text=Foto+4" class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                            <img src="https://placehold.co/600x600/fdecf2/3f3f46?text=Foto+5" class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        </div>
+                    </div>
+
+                    <!-- Painel 2: Painel Interativo (Comunidade) -->
+                    <div id="painel-paz" class="tab-panel hidden">
+                        <!-- Formulário de Envio (Layout Visual) -->
+                        <div class="p-8 bg-white/50 rounded-lg shadow-md border border-black/5 mb-12">
+                            <h3 class="text-xl font-semibold text-neutral-800 text-center mb-4">Participe do nosso painel!</h3>
+                            <p class="text-center text-neutral-600 font-light mb-6">Envie uma foto e uma mensagem sobre o que a paz significa para si.</p>
+                            <div class="space-y-4">
+                                <div>
+                                    <label for="file-upload" class="block text-sm font-medium text-neutral-700">A sua foto</label>
+                                    <input type="file" id="file-upload" class="mt-1 block w-full text-sm text-neutral-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-purple-50 file:text-purple-700 hover:file:bg-purple-100">
+                                </div>
+                                <div>
+                                    <label for="message" class="block text-sm font-medium text-neutral-700">A sua mensagem</label>
+                                    <textarea id="message" rows="3" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-purple-500 focus:ring-purple-500 sm:text-sm" placeholder="Escreva aqui o seu sentimento..."></textarea>
+                                </div>
+                                <button type="submit" class="w-full bg-purple-800 text-white font-bold py-2 px-4 rounded-lg hover:bg-purple-900 transition-colors">Enviar Contribuição</button>
+                            </div>
+                        </div>
+                        <!-- Mural de Contribuições (Layout Visual) -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <!-- Exemplo de Post 1 -->
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden"><img src="https://placehold.co/600x400/a78bfa/ffffff?text=Foto+Público+1" class="w-full h-40 object-cover"><div class="p-4"><p class="text-sm font-light text-neutral-600">"A música hoje lembrou-me que a paz é uma escolha diária. Obrigado!"</p></div></div>
+                            <!-- Exemplo de Post 2 -->
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden"><img src="https://placehold.co/600x400/a78bfa/ffffff?text=Foto+Público+2" class="w-full h-40 object-cover"><div class="p-4"><p class="text-sm font-light text-neutral-600">"Senti uma conexão incrível. A paz que quero construir começa com a arte."</p></div></div>
+                            <!-- Exemplo de Post 3 -->
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden"><img src="https://placehold.co/600x400/a78bfa/ffffff?text=Foto+Público+3" class="w-full h-40 object-cover"><div class="p-4"><p class="text-sm font-light text-neutral-600">"Ver tantos jovens dedicados à paz foi a verdadeira inspiração da noite."</p></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="text-center py-8 border-t border-purple-900/10"><p class="text-sm text-neutral-500">Asas da Paz Kotekitai & Taiyo Ongakutai © 2025</p></footer>
+
+    <script>
+        // --- SCRIPT PARA FUNCIONALIDADE DAS ABAS ---
+        const tabs = document.querySelectorAll('.tab-button');
+        const tabPanels = document.querySelectorAll('.tab-panel');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(item => {
+                    item.classList.remove('tab-active');
+                    item.classList.add('text-gray-500', 'border-transparent', 'hover:border-gray-300');
+                });
+                tab.classList.add('tab-active');
+                tab.classList.remove('text-gray-500', 'border-transparent', 'hover:border-gray-300');
+                tabPanels.forEach(panel => {
+                    panel.classList.add('hidden');
+                });
+                const targetPanelId = tab.getAttribute('data-target');
+                const targetPanel = document.getElementById(targetPanelId);
+                if (targetPanel) {
+                    targetPanel.classList.remove('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
