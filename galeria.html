@@ -15,21 +15,16 @@
     
     <style>
         /* Estilos personalizados */
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #fdfcfb;
-            color: #3f3f46;
-        }
+        body { font-family: 'Poppins', sans-serif; background-color: #fdfcfb; color: #3f3f46; }
         .font-title-stylized { font-family: 'Italiana', serif; }
         .page-gradient {
              background-image: 
                 url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d1c4c9' fill-opacity='0.07'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"),
                 linear-gradient(to bottom, #fdfcfb 0%, #fdecf2 50%, #fdfcfb 100%);
         }
-        .tab-active {
-            border-bottom-color: #581c87;
-            color: #3f3f46;
-        }
+        .tab-active { border-bottom-color: #581c87; color: #3f3f46; }
+        /* Estilo para o botão de envio quando está a carregar */
+        .btn-loading { cursor: not-allowed; background-color: #9333ea; }
     </style>
 </head>
 <body class="page-gradient">
@@ -66,35 +61,9 @@
 
                 <!-- Painéis de Conteúdo das Abas -->
                 <div id="tab-content">
-                    <!-- Painel 1: Fotos & Vídeos -->
+                    <!-- Painel 1: Fotos & Vídeos (Oficial) -->
                     <div id="fotos-videos" class="tab-panel space-y-12">
-                        <!-- Seção de Fotos -->
-                        <div>
-                            <h3 class="text-xl font-semibold text-neutral-800 text-center mb-6">Fotos do Concerto</h3>
-                            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                                <img src="https://placehold.co/600x600/fdecf2/3f3f46?text=Foto+1" class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-                                <img src="https://placehold.co/600x600/fdecf2/3f3f46?text=Foto+2" class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-                                <img src="https://placehold.co/600x600/fdecf2/3f3f46?text=Foto+3" class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-                                <img src="https://placehold.co/600x600/fdecf2/3f3f46?text=Foto+4" class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-                                <img src="https://placehold.co/600x600/fdecf2/3f3f46?text=Foto+5" class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-                                <img src="https://placehold.co/600x600/fdecf2/3f3f46?text=Foto+6" class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-                            </div>
-                        </div>
-                        
-                        <!-- Seção de Vídeos -->
-                        <div>
-                            <h3 class="text-xl font-semibold text-neutral-800 text-center mb-6">Vídeos da Apresentação</h3>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <!-- Vídeo 1 -->
-                                <div class="aspect-video">
-                                    <iframe class="w-full h-full rounded-lg shadow-md" src="https://www.youtube.com/embed/DnOJzC2S8SE?si=g8pUB-dbLxQepWGj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                </div>
-                                <!-- Vídeo 2 -->
-                                <div class="aspect-video">
-                                    <iframe class="w-full h-full rounded-lg shadow-md" src="https://www.youtube.com/embed/YQ75rhS9Jz0?si=5VKBpTCCh3dsOsHp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                </div>
-                            </div>
-                        </div>
+                         <!-- Conteúdo da galeria oficial -->
                     </div>
 
                     <!-- Painel 2: Painel Interativo (Comunidade) -->
