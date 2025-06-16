@@ -15,16 +15,21 @@
     
     <style>
         /* Estilos personalizados */
-        body { font-family: 'Poppins', sans-serif; background-color: #fdfcfb; color: #3f3f46; }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fdfcfb;
+            color: #3f3f46;
+        }
         .font-title-stylized { font-family: 'Italiana', serif; }
         .page-gradient {
              background-image: 
                 url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d1c4c9' fill-opacity='0.07'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"),
                 linear-gradient(to bottom, #fdfcfb 0%, #fdecf2 50%, #fdfcfb 100%);
         }
-        .tab-active { border-bottom-color: #581c87; color: #3f3f46; }
-        /* Estilo para o botão de envio quando está a carregar */
-        .btn-loading { cursor: not-allowed; background-color: #9333ea; }
+        .tab-active {
+            border-bottom-color: #581c87;
+            color: #3f3f46;
+        }
     </style>
 </head>
 <body class="page-gradient">
@@ -63,34 +68,61 @@
                 <div id="tab-content">
                     <!-- Painel 1: Fotos & Vídeos (Oficial) -->
                     <div id="fotos-videos" class="tab-panel space-y-12">
-                         <!-- Conteúdo da galeria oficial -->
+                        <!-- Seção de Fotos -->
+                        <div>
+                            <h3 class="text-xl font-semibold text-neutral-800 text-center mb-6">Fotos do Concerto</h3>
+                            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                                <img src="https://placehold.co/600x600/fdecf2/3f3f46?text=Foto+1" class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                                <img src="https://placehold.co/600x600/fdecf2/3f3f46?text=Foto+2" class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                                <img src="https://placehold.co/600x600/fdecf2/3f3f46?text=Foto+3" class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                                <img src="https://placehold.co/600x600/fdecf2/3f3f46?text=Foto+4" class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                                <img src="https://placehold.co/600x600/fdecf2/3f3f46?text=Foto+5" class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                                <img src="https://placehold.co/600x600/fdecf2/3f3f46?text=Foto+6" class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                            </div>
+                        </div>
+                        
+                        <!-- Seção de Vídeos -->
+                        <div>
+                            <h3 class="text-xl font-semibold text-neutral-800 text-center mb-6">Vídeos da Apresentação</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <!-- Vídeo 1 -->
+                                <div class="aspect-video">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/DnOJzC2S8SE?si=g8pUB-dbLxQepWGj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                                <!-- Vídeo 2 (Placeholder) -->
+                                <div class="aspect-video">
+                                    <iframe class="w-full h-full rounded-lg shadow-md" src="https://www.youtube.com/watch?v=DnOJzC2S8SE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Painel 2: Painel Interativo (Comunidade) -->
                     <div id="painel-paz" class="tab-panel hidden">
-                        <!-- Formulário de Envio -->
+                        <!-- Formulário de Envio (Layout Visual) -->
                         <div class="p-8 bg-white/50 rounded-lg shadow-md border border-black/5 mb-12">
-                             <form id="contribution-form">
-                                <h3 class="text-xl font-semibold text-neutral-800 text-center mb-4">Participe do nosso painel!</h3>
-                                <p class="text-center text-neutral-600 font-light mb-6">Envie uma foto e uma mensagem sobre o que a paz significa para si.</p>
-                                <div class="space-y-4">
-                                    <div>
-                                        <label for="file-upload" class="block text-sm font-medium text-neutral-700">A sua foto</label>
-                                        <input type="file" id="file-upload" accept="image/*" required class="mt-1 block w-full text-sm text-neutral-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-purple-50 file:text-purple-700 hover:file:bg-purple-100">
-                                    </div>
-                                    <div>
-                                        <label for="message" class="block text-sm font-medium text-neutral-700">A sua mensagem</label>
-                                        <textarea id="message" rows="3" required maxlength="200" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-purple-500 focus:ring-purple-500 sm:text-sm" placeholder="Escreva aqui o seu sentimento..."></textarea>
-                                    </div>
-                                    <button type="submit" id="submit-button" class="w-full bg-purple-800 text-white font-bold py-2 px-4 rounded-lg hover:bg-purple-900 transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
-                                        Enviar Contribuição
-                                    </button>
+                            <h3 class="text-xl font-semibold text-neutral-800 text-center mb-4">Participe do nosso painel!</h3>
+                            <p class="text-center text-neutral-600 font-light mb-6">Compartilhe conosco uma foto e uma mensagem sobre o que significou esse momento para você.</p>
+                            <div class="space-y-4">
+                                <div>
+                                    <label for="file-upload" class="block text-sm font-medium text-neutral-700">A sua foto</label>
+                                    <input type="file" id="file-upload" class="mt-1 block w-full text-sm text-neutral-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-purple-50 file:text-purple-700 hover:file:bg-purple-100">
                                 </div>
-                            </form>
+                                <div>
+                                    <label for="message" class="block text-sm font-medium text-neutral-700">A sua mensagem</label>
+                                    <textarea id="message" rows="3" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-purple-500 focus:ring-purple-500 sm:text-sm" placeholder="Escreva aqui o seu sentimento..."></textarea>
+                                </div>
+                                <button type="submit" class="w-full bg-purple-800 text-white font-bold py-2 px-4 rounded-lg hover:bg-purple-900 transition-colors">Enviar Contribuição</button>
+                            </div>
                         </div>
-                        <!-- Mural de Contribuições (será preenchido pelo JavaScript) -->
+                        <!-- Mural de Contribuições (Layout Visual) -->
                         <div id="mural" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                           <!-- Posts do público aparecerão aqui -->
+                            <!-- Exemplo de Post 1 -->
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden"><img src="https://placehold.co/600x400/a78bfa/ffffff?text=Foto+Público+1" class="w-full h-40 object-cover"><div class="p-4"><p class="text-sm font-light text-neutral-600">"A música hoje lembrou-me que a paz é uma escolha diária. Obrigado!"</p></div></div>
+                            <!-- Exemplo de Post 2 -->
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden"><img src="https://placehold.co/600x400/a78bfa/ffffff?text=Foto+Público+2" class="w-full h-40 object-cover"><div class="p-4"><p class="text-sm font-light text-neutral-600">"Senti uma conexão incrível. A paz que quero construir começa com a arte."</p></div></div>
+                            <!-- Exemplo de Post 3 -->
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden"><img src="https://placehold.co/600x400/a78bfa/ffffff?text=Foto+Público+3" class="w-full h-40 object-cover"><div class="p-4"><p class="text-sm font-light text-neutral-600">"Ver tantos jovens dedicados à paz foi a verdadeira inspiração da noite."</p></div></div>
                         </div>
                     </div>
                 </div>
@@ -99,182 +131,28 @@
     </main>
     
     <footer class="text-center py-8 border-t border-purple-900/10"><p class="text-sm text-neutral-500">Asas da Paz Kotekitai & Taiyo Ongakutai © 2025</p></footer>
-    
-    <!-- Modal de Notificação -->
-    <div id="notification-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-        <div class="bg-white p-6 rounded-lg shadow-xl text-center">
-            <p id="notification-message"></p>
-            <button id="notification-close" class="mt-4 bg-purple-800 text-white font-bold py-2 px-4 rounded-lg">Fechar</button>
-        </div>
-    </div>
 
-
-    <!-- Firebase SDKs -->
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-        import { getAuth, signInAnonymously, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
-        import { getFirestore, collection, addDoc, onSnapshot, query, orderBy, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
-        import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-storage.js";
-
-        // --- 1. CONFIGURAÇÃO E INICIALIZAÇÃO ---
-        
-        // A configuração do Firebase é injetada automaticamente pela plataforma.
-        const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};
-        const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
-
-        const app = initializeApp(firebaseConfig);
-        const auth = getAuth(app);
-        const db = getFirestore(app);
-        const storage = getStorage(app);
-        
-        // --- 2. AUTENTICAÇÃO ANÓNIMA ---
-        
-        async function authenticateUser() {
-            try {
-                if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
-                    await signInWithCustomToken(auth, __initial_auth_token);
-                } else {
-                    await signInAnonymously(auth);
-                }
-            } catch (error) {
-                console.error("Erro na autenticação:", error);
-                showNotification("Erro ao conectar. Por favor, tente recarregar a página.");
-            }
-        }
-
-        // --- 3. MANIPULAÇÃO DO FORMULÁRIO ---
-        
-        const form = document.getElementById('contribution-form');
-        const submitButton = document.getElementById('submit-button');
-        const fileInput = document.getElementById('file-upload');
-        const messageInput = document.getElementById('message');
-        const mural = document.getElementById('mural');
-
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            if (!auth.currentUser) {
-                showNotification("Ainda a conectar... Por favor, aguarde um momento.");
-                return;
-            }
-            
-            const file = fileInput.files[0];
-            const message = messageInput.value;
-
-            if (!file || !message) {
-                showNotification("Por favor, selecione uma foto e escreva uma mensagem.");
-                return;
-            }
-
-            submitButton.disabled = true;
-            submitButton.textContent = 'A Enviar...';
-            submitButton.classList.add('btn-loading');
-
-            try {
-                // 3.1. Fazer upload da imagem para o Firebase Storage
-                const storageRef = ref(storage, `public_gallery_images/${appId}/${Date.now()}_${file.name}`);
-                const snapshot = await uploadBytes(storageRef, file);
-                
-                // 3.2. Obter a URL de download da imagem
-                const imageUrl = await getDownloadURL(snapshot.ref);
-
-                // 3.3. Guardar a mensagem e a URL da imagem no Firestore
-                await addDoc(collection(db, `/artifacts/${appId}/public/data/gallery`), {
-                    message: message,
-                    imageUrl: imageUrl,
-                    createdAt: serverTimestamp() 
-                });
-
-                showNotification("A sua contribuição foi enviada com sucesso! Obrigado.");
-                form.reset();
-
-            } catch (error)
-            {
-                console.error("Erro ao enviar contribuição: ", error);
-                showNotification("Ocorreu um erro. Por favor, tente novamente.");
-            } finally {
-                submitButton.disabled = false;
-                submitButton.textContent = 'Enviar Contribuição';
-                submitButton.classList.remove('btn-loading');
-            }
-        });
-
-        // --- 4. EXIBIÇÃO EM TEMPO REAL ---
-
-        function displayPost(doc) {
-            const data = doc.data();
-            const postDiv = document.createElement('div');
-            postDiv.className = 'bg-white rounded-lg shadow-md overflow-hidden';
-            
-            const img = document.createElement('img');
-            img.src = data.imageUrl;
-            img.alt = 'Foto da contribuição';
-            img.className = 'w-full h-40 object-cover';
-            img.onerror = () => { img.src = 'https://placehold.co/600x400/a78bfa/ffffff?text=Imagem+Inválida'; };
-
-            const messageDiv = document.createElement('div');
-            messageDiv.className = 'p-4';
-            
-            const p = document.createElement('p');
-            p.className = 'text-sm font-light text-neutral-600';
-            p.textContent = data.message;
-            
-            messageDiv.appendChild(p);
-            postDiv.appendChild(img);
-            postDiv.appendChild(messageDiv);
-            
-            mural.appendChild(postDiv);
-        }
-
-        async function listenForPosts() {
-             if (!auth.currentUser) {
-                await authenticateUser();
-             }
-
-            const q = query(collection(db, `/artifacts/${appId}/public/data/gallery`), orderBy('createdAt', 'desc'));
-            
-            onSnapshot(q, (querySnapshot) => {
-                mural.innerHTML = ''; // Limpa o mural para evitar duplicados
-                if (querySnapshot.empty) {
-                    mural.innerHTML = '<p class="text-center text-neutral-500 col-span-full">Ainda ninguém partilhou a sua paz. Seja o primeiro!</p>';
-                } else {
-                    querySnapshot.forEach(displayPost);
-                }
-            }, (error) => {
-                console.error("Erro ao escutar por posts:", error);
-                showNotification("Não foi possível carregar as contribuições.");
-            });
-        }
-        
-        // --- 5. MODAL DE NOTIFICAÇÃO ---
-        const modal = document.getElementById('notification-modal');
-        const modalMessage = document.getElementById('notification-message');
-        const modalCloseBtn = document.getElementById('notification-close');
-
-        function showNotification(message) {
-            modalMessage.textContent = message;
-            modal.classList.remove('hidden');
-        }
-        
-        modalCloseBtn.addEventListener('click', () => {
-            modal.classList.add('hidden');
-        });
-
-        // --- INICIAR A APLICAÇÃO ---
-        listenForPosts();
-
-        // --- SCRIPT DAS ABAS (COPIADO DA VERSÃO ANTERIOR) ---
+    <script>
+        // --- SCRIPT PARA FUNCIONALIDADE DAS ABAS ---
         const tabs = document.querySelectorAll('.tab-button');
         const tabPanels = document.querySelectorAll('.tab-panel');
 
         tabs.forEach(tab => {
             tab.addEventListener('click', () => {
-                tabs.forEach(item => { item.classList.remove('tab-active'); item.classList.add('text-gray-500', 'border-transparent', 'hover:border-gray-300'); });
+                tabs.forEach(item => {
+                    item.classList.remove('tab-active');
+                    item.classList.add('text-gray-500', 'border-transparent', 'hover:border-gray-300');
+                });
                 tab.classList.add('tab-active');
                 tab.classList.remove('text-gray-500', 'border-transparent', 'hover:border-gray-300');
-                tabPanels.forEach(panel => { panel.classList.add('hidden'); });
+                tabPanels.forEach(panel => {
+                    panel.classList.add('hidden');
+                });
                 const targetPanelId = tab.getAttribute('data-target');
                 const targetPanel = document.getElementById(targetPanelId);
-                if (targetPanel) { targetPanel.classList.remove('hidden'); }
+                if (targetPanel) {
+                    targetPanel.classList.remove('hidden');
+                }
             });
         });
     </script>
