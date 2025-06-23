@@ -250,7 +250,6 @@
             postDiv.appendChild(img);
             postDiv.appendChild(messageDiv);
             
-            // CORREÇÃO: Usar appendChild para manter a ordem correta (newest-first)
             mural.appendChild(postDiv);
         }
 
@@ -293,72 +292,74 @@
     
     <!-- Lógica de UI (Separada para robustez) -->
     <script>
-        // Lógica das Abas
-        const tabs = document.querySelectorAll('.tab-button');
-        const tabPanels = document.querySelectorAll('.tab-panel');
+        document.addEventListener('DOMContentLoaded', () => {
+            // Lógica das Abas
+            const tabs = document.querySelectorAll('.tab-button');
+            const tabPanels = document.querySelectorAll('.tab-panel');
 
-        tabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                tabs.forEach(item => { 
-                    item.classList.remove('tab-active'); 
-                    item.classList.add('text-gray-500', 'border-transparent', 'hover:border-gray-300'); 
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    tabs.forEach(item => { 
+                        item.classList.remove('tab-active'); 
+                        item.classList.add('text-gray-500', 'border-transparent', 'hover:border-gray-300'); 
+                    });
+                    tab.classList.add('tab-active');
+                    tab.classList.remove('text-gray-500', 'border-transparent', 'hover:border-gray-300');
+                    
+                    tabPanels.forEach(panel => { 
+                        panel.classList.add('hidden'); 
+                    });
+                    
+                    const targetPanelId = tab.getAttribute('data-target');
+                    const targetPanel = document.getElementById(targetPanelId);
+                    if (targetPanel) { 
+                        targetPanel.classList.remove('hidden'); 
+                    }
                 });
-                tab.classList.add('tab-active');
-                tab.classList.remove('text-gray-500', 'border-transparent', 'hover:border-gray-300');
-                
-                tabPanels.forEach(panel => { 
-                    panel.classList.add('hidden'); 
-                });
-                
-                const targetPanelId = tab.getAttribute('data-target');
-                const targetPanel = document.getElementById(targetPanelId);
-                if (targetPanel) { 
-                    targetPanel.classList.remove('hidden'); 
+            });
+
+            // Lógica da Pré-visualização da Imagem
+            const fileInputUI = document.getElementById('file-upload');
+            const previewContainer = document.getElementById('image-preview-container');
+            const previewImage = document.getElementById('image-preview');
+
+            fileInputUI.addEventListener('change', () => {
+                const file = fileInputUI.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = (e) => {
+                        previewImage.src = e.target.result;
+                        previewContainer.classList.remove('hidden');
+                    };
+                    reader.readAsDataURL(file);
+                } else {
+                    previewContainer.classList.add('hidden');
                 }
             });
-        });
 
-        // Lógica da Pré-visualização da Imagem
-        const fileInputUI = document.getElementById('file-upload');
-        const previewContainer = document.getElementById('image-preview-container');
-        const previewImage = document.getElementById('image-preview');
+            // Lógica do Contador de Caracteres
+            const messageInputUI = document.getElementById('message');
+            const charCounter = document.getElementById('char-counter');
+            const maxLength = messageInputUI.getAttribute('maxlength');
 
-        fileInputUI.addEventListener('change', () => {
-            const file = fileInputUI.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = (e) => {
-                    previewImage.src = e.target.result;
-                    previewContainer.classList.remove('hidden');
-                };
-                reader.readAsDataURL(file);
-            } else {
+            messageInputUI.addEventListener('input', () => {
+                const currentLength = messageInputUI.value.length;
+                charCounter.textContent = `${currentLength} / ${maxLength}`;
+
+                if (currentLength > maxLength * 0.9) {
+                    charCounter.classList.add('text-red-500');
+                } else {
+                    charCounter.classList.remove('text-red-500');
+                }
+            });
+            
+            // Limpa a pré-visualização e o contador quando o formulário é resetado
+            const formUI = document.getElementById('contribution-form');
+            formUI.addEventListener('reset', () => {
                 previewContainer.classList.add('hidden');
-            }
-        });
-
-        // Lógica do Contador de Caracteres
-        const messageInputUI = document.getElementById('message');
-        const charCounter = document.getElementById('char-counter');
-        const maxLength = messageInputUI.getAttribute('maxlength');
-
-        messageInputUI.addEventListener('input', () => {
-            const currentLength = messageInputUI.value.length;
-            charCounter.textContent = `${currentLength} / ${maxLength}`;
-
-            if (currentLength > maxLength * 0.9) {
-                charCounter.classList.add('text-red-500');
-            } else {
+                charCounter.textContent = `0 / ${maxLength}`;
                 charCounter.classList.remove('text-red-500');
-            }
-        });
-        
-        // Limpa a pré-visualização e o contador quando o formulário é resetado
-        const formUI = document.getElementById('contribution-form');
-        formUI.addEventListener('reset', () => {
-            previewContainer.classList.add('hidden');
-            charCounter.textContent = `0 / ${maxLength}`;
-            charCounter.classList.remove('text-red-500');
+            });
         });
     </script>
 
